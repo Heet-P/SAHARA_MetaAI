@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAHARA</title>
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Icon sprite (inline, so the dashboard works fully offline) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+      <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></symbol>
+      <symbol id="i-activity" viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z" fill="currentColor"/></symbol>
+      <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5" fill="currentColor"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+      <symbol id="i-daynight" viewBox="0 0 24 24"><circle cx="8" cy="10" r="3"/><path d="M8 3v1.5M8 15.5V17M2.5 10H1M3.8 5.8l1 1M3.8 14.2l1-1M12.2 5.8l-1 1"/><path d="M22 16.5A6 6 0 1 1 15 9a4.8 4.8 0 0 0 7 7.5z"/></symbol>
+      <symbol id="i-radar" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/><path d="M11 8v6M8 11h6"/></symbol>
+      <symbol id="i-land" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></symbol>
+      <symbol id="i-package" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+      <symbol id="i-locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>
+      <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></symbol>
+      <symbol id="i-crosshair" viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></symbol>
+      <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m3 20 6-10 4 6 2-3 6 7z"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.3 17a9 9 0 1 1 17.4 0"/></symbol>
+      <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/></symbol>
+      <symbol id="i-satellite" viewBox="0 0 24 24"><path d="m13 7 4-4 4 4-4 4z"/><path d="m3 17 4-4 4 4-4 4z"/><path d="m9 11 4 4"/><path d="M15 21a6 6 0 0 0 6-6"/></symbol>
+      <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-9-1 2-2 3-4 3 0-2-1-4-2-5C8 7 5 10 5 15c0 4 3 7 7 7z"/></symbol>
+      <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12 20 4l-4 16-4-6z"/><path d="m12 14 8-10"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2c.6 4.8 2.2 7.4 8 10-5.8 2.6-7.4 5.2-8 10-.6-4.8-2.2-7.4-8-10 5.8-2.6 7.4-5.2 8-10z" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></symbol>
+      <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.3 7.3a8 8 0 1 0 11.4 0"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+      <symbol id="i-broadcast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M8.5 15.5a5 5 0 0 1 0-7M15.5 8.5a5 5 0 0 1 0 7M5.6 18.4a9 9 0 0 1 0-12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></symbol>
+      <symbol id="i-signal" viewBox="0 0 24 24"><path d="M4 20v-3M9 20v-7M14 20V9M19 20V4"/></symbol>
+    </defs>
+  </svg>
+
+  <svg class="topo" viewBox="0 0 360 560" preserveAspectRatio="xMinYMax meet" aria-hidden="true"><path d="M-44 494L-41 493L-39 492L-37 491L-34 491L-31 491L-29 491L-27 492L-24 494L-22 496L-21 498L-19 501L-18 503L-17 505L-15 508L-14 509L-13 511L-11 512L-9 513L-7 514L-6 514L-4 515L-2 516L-0 517L1 518L3 519L4 520L5 522L6 523L8 524L9 525L11 526L13 527L15 528L17 530L18 531L20 532L21 534L21 536L21 538L21 540L21 542L20 544L20 546L20 547L20 549L21 551L22 552L24 554L26 555L28 557L30 559L31 561L33 563L34 565L35 567L35 569L35 571L35 573L35 575L35 578"/><path d="M-45 469L-42 468L-39 466L-35 465L-32 465L-28 465L-25 466L-22 468L-19 470L-16 473L-14 476L-12 479L-9 481L-7 484L-5 486L-3 488L-1 490L1 491L4 493L6 495L7 497L9 499L10 501L12 503L13 506L15 507L17 509L19 510L22 511L25 512L28 512L32 513L36 513L39 514L42 516L45 518L47 520L48 522L49 525L49 528L49 531L49 533L49 536L49 539L50 541L51 543L52 546L54 548L56 551L57 553L59 556L60 558L60 561L61 564L61 567L61 569L61 572L62 575L62 578L63 581L64 584"/><path d="M-47 447L-42 445L-38 445L-34 445L-30 445L-26 446L-22 448L-18 450L-15 452L-11 454L-7 455L-4 457L-0 459L3 460L6 462L9 464L12 466L15 469L17 473L19 476L20 480L21 484L22 488L24 491L25 493L28 495L31 496L34 497L39 497L43 498L48 498L53 499L58 500L62 501L66 503L69 506L72 508L74 511L75 514L77 518L79 521L80 524L82 527L85 530L87 533L88 537L90 540L91 543L91 547L91 551L90 554L89 558L88 561L87 565L86 568L86 572L86 575L87 579L89 583L91 587L92 591"/><path d="M-48 427L-43 428L-38 430L-33 431L-29 433L-24 434L-20 435L-15 435L-11 436L-6 435L-1 435L4 435L9 435L13 436L18 438L22 440L25 444L28 448L30 453L31 458L33 463L35 467L37 471L39 474L42 476L45 478L50 479L54 480L59 481L64 482L69 483L74 485L78 487L82 490L86 492L90 495L94 498L98 501L102 504L107 507L112 510L116 513L121 517L125 520L127 525L129 529L130 534L129 539L127 544L124 548L122 553L119 557L116 562L114 566L113 570L113 574L114 579L115 583L116 588L117 592L118 597"/><path d="M-49 412L-43 416L-38 419L-33 421L-28 422L-23 423L-18 422L-13 421L-7 419L-1 417L5 416L11 415L17 415L22 416L27 418L32 421L36 425L39 429L42 434L46 438L49 442L52 445L56 448L61 450L65 452L70 455L74 457L79 459L83 462L87 465L90 469L93 472L97 476L101 479L105 482L111 485L117 487L124 490L131 492L139 495L146 498L153 502L158 506L162 511L165 517L166 522L165 528L163 534L160 540L157 546L154 552L152 557L150 562L148 567L147 572L146 577L145 582L144 588L143 592L141 597L138 602"/><path d="M-49 398L-43 402L-38 405L-32 407L-27 408L-21 407L-15 406L-9 404L-3 402L3 401L10 400L16 400L22 400L28 402L34 404L39 406L45 408L50 411L56 412L62 414L69 415L75 417L81 419L87 421L93 424L98 428L102 432L105 437L108 443L110 448L112 453L115 458L119 463L123 466L129 469L136 472L144 475L153 477L161 480L169 484L177 488L183 493L188 498L191 504L193 511L193 517L193 524L192 531L192 537L191 544L190 550L189 556L188 563L187 569L185 575L181 581L177 586L172 592L166 597L159 601L153 605"/><path d="M-50 378L-44 381L-37 383L-31 384L-25 385L-18 385L-12 385L-5 385L1 385L7 386L14 388L20 389L26 391L33 392L39 392L47 392L55 391L63 389L72 388L82 386L91 386L100 386L108 388L115 391L120 396L125 401L129 408L132 415L134 421L137 428L140 434L144 439L148 444L154 448L161 452L168 456L176 460L183 464L189 469L195 475L200 481L204 487L206 493L209 500L211 507L214 514L216 520L219 527L222 534L224 541L226 548L227 556L226 563L223 570L218 577L212 584L204 590L195 595L186 600L177 605L169 609"/><path d="M-52 350L-44 351L-37 352L-29 353L-22 355L-15 358L-8 361L-1 365L5 369L11 372L17 375L24 377L31 378L39 377L47 375L57 372L67 368L78 364L90 361L101 359L111 358L121 359L130 362L137 366L144 372L149 378L155 384L159 391L164 397L170 403L175 409L181 415L188 420L194 426L199 432L204 438L208 445L211 452L213 460L214 468L215 475L217 483L219 490L222 497L227 504L232 510L238 517L243 524L249 532L253 539L255 547L255 555L253 563L249 571L242 579L234 586L225 592L216 598L207 604L199 609L192 615"/><path d="M-54 317L-45 316L-36 317L-28 320L-19 324L-12 330L-4 336L3 342L10 347L17 352L24 354L32 355L40 354L50 352L60 349L71 345L82 342L94 339L105 337L116 337L126 338L136 341L146 344L154 348L163 352L172 356L181 361L190 365L199 370L208 375L216 381L223 387L229 394L234 403L236 412L237 422L236 432L235 442L233 452L232 461L231 470L232 478L235 486L239 493L245 500L251 507L257 514L263 522L267 530L270 538L270 547L268 555L265 563L260 572L255 579L249 587L243 594L238 601L233 609L229 616L225 622"/><path d="M-56 287L-46 286L-36 288L-26 291L-17 296L-8 302L1 307L9 312L17 315L26 317L35 318L45 318L55 317L65 316L76 315L86 315L97 315L107 316L117 319L127 321L137 324L147 327L158 329L169 331L182 333L194 335L208 337L221 339L233 343L244 348L253 355L260 363L264 373L266 384L266 396L264 408L261 420L258 432L256 443L255 453L255 462L257 471L259 479L263 487L266 495L270 503L272 512L273 520L273 529L272 538L270 547L268 555L266 563L264 572L263 580L263 588L264 597L264 605L264 614L264 623L261 631"/><path d="M-57 266L-46 266L-36 266L-25 267L-15 269L-4 270L6 270L17 270L28 270L39 269L50 269L62 270L73 272L83 275L93 279L102 284L111 290L120 296L129 301L138 306L148 309L160 311L173 312L186 313L201 313L217 313L232 315L246 318L258 323L268 330L276 338L282 349L285 360L287 372L287 384L287 397L287 409L287 420L287 431L288 441L289 451L290 461L290 471L289 481L287 491L284 501L280 511L275 520L271 529L267 538L265 547L265 555L267 563L270 572L275 581L280 590L286 599L290 609L292 619L292 628L289 637"/><path d="M-58 254L-47 250L-35 247L-24 242L-12 237L1 231L14 226L27 222L40 218L53 217L66 218L78 222L90 228L100 236L109 244L118 254L126 263L135 271L144 277L154 282L166 286L178 288L192 290L206 291L221 293L235 296L248 301L259 307L269 314L277 323L284 333L290 343L295 354L300 365L305 375L309 385L314 396L319 406L322 417L325 428L325 439L323 451L318 463L312 475L304 487L295 499L287 510L279 520L274 529L271 538L271 546L274 555L279 564L285 573L292 582L299 592L304 602L307 612L309 622L308 632L305 641"/><path d="M-58 239L-47 231L-35 222L-22 212L-9 201L6 191L20 183L36 177L51 174L65 174L79 178L92 184L104 192L115 201L125 211L135 220L145 229L156 236L167 242L179 248L191 253L203 258L214 264L226 270L236 278L245 286L253 295L260 305L267 315L275 325L282 334L291 343L300 351L310 359L320 367L331 375L340 384L347 394L351 405L352 418L351 431L346 444L338 458L329 471L320 484L311 496L303 507L298 517L295 527L294 536L296 545L299 555L303 564L308 573L311 583L314 593L315 603L315 613L315 623L315 633L315 643"/><path d="M-60 212L-48 201L-35 189L-21 177L-6 166L10 157L26 151L41 147L57 146L72 148L87 152L101 157L115 163L128 169L142 175L155 181L169 187L182 193L194 200L206 208L217 218L226 228L234 241L240 254L245 268L249 282L254 295L259 307L265 318L273 327L282 334L294 341L306 347L320 353L332 360L344 368L353 378L359 389L363 401L363 414L361 427L357 441L352 454L347 467L342 479L339 491L337 502L336 512L337 523L337 533L338 544L337 554L336 564L333 574L330 584L327 594L324 604L323 614L323 624L326 635L331 647"/></svg>
+
+  <header class="topbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 5 16 27 29 5 16 12z"/><path d="M16 12v15"/></svg>
+      <h1>SAHARA</h1>
+      <span class="brand-slash" aria-hidden="true"></span>
+      <p>Search &middot; Detect &middot; Rescue</p>
+    </div>
+    <div class="chips">
+      <span id="mode-badge" class="chip night-chip"><svg class="i"><use href="#i-moon"/></svg>Night &middot; thermal</span>
+      <span id="connection" class="chip status-chip"><i class="dot"></i><span>Connecting&hellip;</span></span>
+      <span id="gps-chip" class="chip"><svg class="i"><use href="#i-broadcast"/></svg><span>GPS &mdash;</span></span>
+      <span id="battery-chip" class="chip"><svg class="i"><use href="#i-battery"/></svg><span>&mdash;</span></span>
+      <span class="bar-sep" aria-hidden="true"></span>
+      <span id="clock" class="chip clock">--:--:-- UTC</span>
+      <button id="btn-ai" class="ai-chip" title="AI Mission Commander (A)"><svg class="i ai-spark"><use href="#i-spark"/></svg><span>AI Commander</span><b id="ai-mode" class="ai-mode"></b></button>
+    </div>
+  </header>
+
+  <aside class="rail">
+    <nav class="rail-nav">
+      <button class="nav-btn active" data-view="home"><svg class="i"><use href="#i-target"/></svg><span>Mission</span></button>
+      <button class="nav-btn" data-view="map"><svg class="i"><use href="#i-map"/></svg><span>Map</span></button>
+      <button class="nav-btn" data-view="telemetry"><svg class="i"><use href="#i-activity"/></svg><span>Telemetry</span></button>
+      <button class="nav-btn nav-logs" id="btn-logs" title="Mission log and console (L)"><svg class="i"><use href="#i-file"/></svg><span>Logs</span><b id="log-badge" class="badge"></b></button>
+      <button class="nav-btn" data-view="settings"><svg class="i"><use href="#i-settings"/></svg><span>Settings</span></button>
+    </nav>
+  </aside>
+
+  <div class="app">
+    <main>
+      <!-- ================= MISSION (home) ================= -->
+      <section class="view active" data-view="home">
+        <div class="home-grid">
+          <div class="card feed show-reticle offline" id="feed">
+            <div class="feed-stage mode-ai" id="feed-stage">
+              <img id="video" class="feed-img" src="/video_feed" alt="Drone camera with AI detections">
+              <img id="thermal" class="feed-img thermal-img" alt="Raw thermal camera">
+              <svg class="split-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line id="split-line" x1="54" y1="0" x2="46" y2="100"/>
+              </svg>
+              <button id="split-knob" class="split-knob" aria-label="Drag to compare AI feed and thermal">
+                <svg viewBox="0 0 24 24"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg>
+              </button>
+              <span class="split-label left">AI FEED</span>
+              <span class="split-label right">THERMAL</span>
+              <div id="reticle" class="reticle"></div>
+            </div>
+            <div class="feed-empty" aria-hidden="true">
+              <span class="feed-empty-ico"><svg class="i"><use href="#i-camera"/></svg></span>
+              <b id="feed-empty-title">Camera feed offline</b>
+              <span id="feed-empty-sub">Launch the simulation, then turn on the camera.</span>
+            </div>
+            <div class="viewfinder" aria-hidden="true"><span class="vf tl"></span><span class="vf tr"></span><span class="vf bl"></span><span class="vf br"></span></div>
+
+            <div class="overlay top-left">
+              <div class="feed-pill live-chip" id="live-chip">
+                <i class="rec"></i><b id="live-text">OFFLINE</b>
+                <span class="pill-sep" aria-hidden="true"></span>
+                <button class="feed-mode-btn" id="feed-mode-btn" aria-haspopup="menu" aria-expanded="false">
+                  <span id="feed-mode-label">RGB (YOLOv8)</span><svg class="i"><use href="#i-chevron"/></svg>
+                </button>
+                <span id="live-meta" hidden></span>
+                <div class="menu" id="view-seg" role="menu">
+                  <button data-feed="ai" class="active" role="menuitemradio"><span>AI detections</span><svg class="i"><use href="#i-check"/></svg></button>
+                  <button data-feed="thermal" role="menuitemradio"><span>Thermal (raw)</span><svg class="i"><use href="#i-check"/></svg></button>
+                  <button data-feed="split" role="menuitemradio"><span>Split compare</span><svg class="i"><use href="#i-check"/></svg></button>
+                </div>
+              </div>
+            </div>
+            <div class="overlay top-right">
+              <button class="icon-btn" id="btn-fullscreen" title="Full screen"><svg class="i"><use href="#i-expand"/></svg></button>
+              <button class="icon-btn on" id="btn-reticle" title="Toggle crosshair"><svg class="i"><use href="#i-crosshair"/></svg></button>
+            </div>
+            <div class="toasts" id="toasts"></div>
+            <div class="overlay bottom-left">
+              <div class="hud" id="hud">
+                <dl>
+                  <dt>ALT</dt><dd id="hud-alt">&mdash;</dd>
+                  <dt>SPD</dt><dd id="hud-spd">&mdash;</dd>
+                  <dt>HDG</dt><dd id="hud-hdg">&mdash;</dd>
+                </dl>
+                <span id="hud-stage" class="hud-stage">IDLE</span>
+              </div>
+            </div>
+            <div class="overlay bottom-right">
+              <div class="compass" title="Heading">
+                <span class="c-n">N</span>
+                <svg id="compass-needle" viewBox="0 0 24 24"><path d="M12 3 16 16 12 13 8 16z"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="side">
+            <div class="card mission-card">
+              <div class="mc-row">
+                <label class="mc-cell grow">
+                  <span class="eyebrow">Mission</span>
+                  <span class="mc-select">
+                    <select id="mission-quick" aria-label="Mission type">
+                      <option value="search">Search &amp; Rescue</option>
+                      <option value="hop">Hop test</option>
+                    </select>
+                  </span>
+                </label>
+                <div class="mc-cell">
+                  <span class="eyebrow">Status</span>
+                  <span class="stage-pill" id="stage-pill"><i></i><b id="t-stage-pill">Idle</b></span>
+                </div>
+              </div>
+              <div class="mc-progress">
+                <div class="mc-progress-head"><span class="eyebrow" id="progress-label">Search progress</span><span id="progress-value">&mdash;</span></div>
+                <div class="progress"><div id="progress-bar"></div></div>
+                <span class="mc-meta" id="map-meta"></span>
+              </div>
+            </div>
+
+            <div class="card map-card">
+              <canvas id="map-canvas" class="map-canvas"></canvas>
+              <div class="viewfinder accent" aria-hidden="true"><span class="vf tl"></span><span class="vf tr"></span><span class="vf bl"></span><span class="vf br"></span></div>
+              <div class="map-tools" data-map="map-canvas">
+                <button class="icon-btn sm" data-zoom="in" title="Zoom in"><svg class="i"><use href="#i-plus"/></svg></button>
+                <button class="icon-btn sm" data-zoom="out" title="Zoom out"><svg class="i"><use href="#i-minus"/></svg></button>
+                <button class="icon-btn sm" data-zoom="follow" title="Follow drone"><svg class="i"><use href="#i-locate"/></svg></button>
+              </div>
+            </div>
+
+            <div class="card status-card">
+              <div class="stats">
+                <div class="stat"><svg class="i"><use href="#i-mountain"/></svg><b><span id="s-alt">&mdash;</span><small>m</small></b><span>ALT</span></div>
+                <div class="stat"><svg class="i"><use href="#i-gauge"/></svg><b><span id="s-spd">&mdash;</span><small>m/s</small></b><span>SPD</span></div>
+                <div class="stat"><svg class="i"><use href="#i-battery"/></svg><b><span id="s-bat">&mdash;</span><small>%</small></b><span>BAT</span></div>
+                <div class="stat"><svg class="i"><use href="#i-satellite"/></svg><b><span id="s-sat">&mdash;</span></b><span>SAT</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= MAP ================= -->
+      <section class="view" data-view="map">
+        <div class="map-grid">
+          <div class="card map-card big">
+            <canvas id="map-canvas-big" class="map-canvas"></canvas>
+            <div class="map-tools" data-map="map-canvas-big">
+              <button class="icon-btn" data-zoom="in" title="Zoom in"><svg class="i"><use href="#i-plus"/></svg></button>
+              <button class="icon-btn" data-zoom="out" title="Zoom out"><svg class="i"><use href="#i-minus"/></svg></button>
+              <button class="icon-btn" data-zoom="follow" title="Follow drone"><svg class="i"><use href="#i-locate"/></svg></button>
+            </div>
+            <div class="map-legend">
+              <span><i class="lg heat"></i>Casualty probability</span>
+              <span><i class="lg trail"></i>Flight path</span>
+              <span><i class="lg victim"></i>Casualty</span>
+              <span><i class="lg route"></i>Safe ground route</span>
+              <span><i class="lg fire"></i>Fire</span>
+              <span><i class="lg flood"></i>Flood</span>
+              <span><i class="lg structure"></i>Collapsed structure</span>
+              <span><i class="lg smoke"></i>Smoke (AI)</span>
+              <span><i class="lg power_line"></i>Power line (AI)</span>
+              <span><i class="lg landslide"></i>Landslide (AI)</span>
+            </div>
+          </div>
+          <div class="map-side">
+            <div class="card board">
+              <div class="card-head"><h2>Rescue priorities</h2></div>
+              <div id="victims" class="victims"><p class="empty">No casualties confirmed yet.</p></div>
+              <div class="card-head sub"><h2>Hazards</h2></div>
+              <div id="hazards" class="hazards"><p class="empty">None detected.</p></div>
+            </div>
+            <div class="card alerts">
+              <div class="card-head"><h2>Alerts</h2></div>
+              <ol id="alerts" class="alert-list"></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TELEMETRY ================= -->
+      <section class="view" data-view="telemetry">
+        <div class="telemetry-grid-view">
+          <div class="card">
+            <div class="card-head"><h2>Vehicle</h2></div>
+            <dl class="kv">
+              <dt>Armed</dt><dd id="t-armed">&mdash;</dd>
+              <dt>Flight mode</dt><dd id="t-mode">&mdash;</dd>
+              <dt>Sensor</dt><dd id="t-sensor">&mdash;</dd>
+              <dt>Mission stage</dt><dd id="t-stage">&mdash;</dd>
+              <dt>Search progress</dt><dd id="t-search">&mdash;</dd>
+              <dt>Battery</dt><dd id="t-battery">&mdash;</dd>
+              <dt>Altitude</dt><dd id="t-altitude">&mdash;</dd>
+              <dt>Position</dt><dd id="t-position">&mdash;</dd>
+              <dt>Persons in frame</dt><dd id="t-persons">&mdash;</dd>
+              <dt>Person confirmed</dt><dd id="t-confirmed">&mdash;</dd>
+              <dt>Payload</dt><dd id="t-payload">&mdash;</dd>
+            </dl>
+            <div class="process-row">
+              <span id="p-sim" class="dot-pill">Simulation</span>
+              <span id="p-bridge" class="dot-pill">Mission bridge</span>
+              <span id="p-feed" class="dot-pill">Detector</span>
+            </div>
+          </div>
+          <div class="tele-col">
+            <div class="card obstacle-card" id="obstacle-card">
+              <div class="card-head"><h2>Forward lidar</h2><span id="obs-text" class="meta">&mdash;</span></div>
+              <canvas id="obs-canvas" class="obs-canvas"></canvas>
+            </div>
+          <div class="card console">
+            <div class="card-head"><h2>Console</h2></div>
+            <pre id="log"></pre>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SETTINGS ================= -->
+      <section class="view" data-view="settings">
+        <div class="settings-grid">
+          <div class="card">
+            <div class="card-head"><h2>Mission setup</h2></div>
+            <label class="field sim-only">
+              <span>World</span>
+              <select id="world-select" title="Gazebo world to launch">
+                <option value="disaster" selected>Post-disaster zone</option>
+                <option value="runway">Runway (flat)</option>
+                <option value="region">Region 200 m (city, forest, village, river)</option>
+              </select>
+              <small>Locked while a simulation runs.</small>
+            </label>
+            <label class="field sim-only" id="seed-field">
+              <span>Casualty placement (region world)</span>
+              <input type="text" id="seed-input" placeholder="random" inputmode="numeric">
+              <small>Blank = new random placement each launch. A number repeats the same placement. Seed 3 is the demo seed: all 6 casualties clearly visible.</small>
+            </label>
+            <label class="field">
+              <span>Mission type</span>
+              <select id="mission-type-select">
+                <option value="search" selected>Search &amp; rescue</option>
+                <option value="hop">Hop test: take off, hover, land in place</option>
+              </select>
+              <small>Hop test: straight up to the altitude below, hover, then LAND where it is. No horizontal movement. Use it for the first real-drone flights.</small>
+            </label>
+            <label class="field">
+              <span>Hop test altitude (m)</span>
+              <input type="text" id="hop-alt-input" value="20" inputmode="decimal">
+            </label>
+            <label class="field">
+              <span>Search planner</span>
+              <select id="planner-select">
+                <option value="bayes" selected>Probability map (Bayesian)</option>
+                <option value="grid">Lawnmower grid</option>
+              </select>
+              <small>The probability map flies wherever survivors are most likely and not yet searched.</small>
+            </label>
+            <label class="field">
+              <span>When a casualty is confirmed</span>
+              <select id="confirm-select">
+                <option value="continue" selected>Mark, drop aid kit, keep searching</option>
+                <option value="land">Land beside the casualty</option>
+              </select>
+            </label>
+          </div>
+          <div class="card">
+            <div class="card-head"><h2>Reports</h2></div>
+            <p class="muted">The situation report is generated from the drone's own map: casualties with coordinates and priorities, hazards, safe routes and the mission log. It works without any network connection.</p>
+            <button class="btn-secondary" id="btn-report-2"><svg class="i"><use href="#i-file"/></svg>Open SITREP</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="actions card">
+      <button id="btn-mission" class="act act-primary"><svg class="i"><use href="#i-play"/></svg><span>Start Mission</span></button>
+      <button id="btn-sim" class="act act-secondary"><svg class="i"><use href="#i-power"/></svg><span>Launch Sim</span></button>
+      <span class="act-sep" aria-hidden="true"></span>
+      <button id="btn-feed" class="act act-ghost"><svg class="i"><use href="#i-camera"/></svg><span>Camera</span></button>
+      <button id="btn-mode" class="act act-ghost"><svg class="i"><use href="#i-moon"/></svg><span>Night mode</span></button>
+      <button id="btn-land" class="act act-ghost"><svg class="i"><use href="#i-land"/></svg><span>Land</span></button>
+      <button id="btn-drop" class="act act-ghost"><svg class="i"><use href="#i-package"/></svg><span>Drop Payload</span></button>
+      <button id="btn-report" class="act act-ghost"><svg class="i"><use href="#i-file"/></svg><span>SITREP</span></button>
+      <span class="act-sep" aria-hidden="true"></span>
+      <button id="btn-estop" class="act act-danger"><svg class="i"><use href="#i-alert"/></svg><span>Emergency Stop</span></button>
+    </nav>
+  </div>
+
+  <!-- Log drawer: readable mission events + raw console from every process -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-tabs" id="drawer-tabs">
+        <button data-tab="events" class="active">Events</button>
+        <button data-tab="console">Console</button>
+      </div>
+      <div class="drawer-filters" id="drawer-filters">
+        <label><input type="checkbox" value="bridge" checked> Mission bridge</label>
+        <label><input type="checkbox" value="feed" checked> Detector</label>
+        <label><input type="checkbox" value="gui" checked> Dashboard</label>
+        <label><input type="checkbox" value="sim"> Simulator</label>
+        <input type="search" id="log-search" placeholder="Filter text&hellip;">
+        <label><input type="checkbox" id="log-follow" checked> Follow</label>
+      </div>
+      <button class="icon-btn" id="drawer-close" title="Close (L)"><svg class="i"><use href="#i-close"/></svg></button>
+    </div>
+    <ol class="drawer-events alert-list" id="drawer-events"></ol>
+    <pre class="drawer-console" id="drawer-console" hidden></pre>
+  </aside>
+
+  <!-- AI Mission Commander (sahara_ai: Muse Spark + SAM 3.1 on Meta Model API) -->
+  <aside class="ai-panel" id="ai-panel" aria-hidden="true">
+    <header class="ai-head">
+      <div class="ai-title"><span class="ai-badge"><svg class="i"><use href="#i-spark"/></svg></span><div><b>AI Mission Commander</b><small id="ai-sub">Muse Spark · SAM 3.1</small></div></div>
+      <button class="icon-btn" id="ai-reset" title="New conversation"><svg class="i"><use href="#i-plus"/></svg></button>
+      <button class="icon-btn" id="ai-close" title="Close (A)"><svg class="i"><use href="#i-close"/></svg></button>
+    </header>
+    <ol class="ai-log" id="ai-log">
+      <li class="ai-hint">Tell the drone what you know, e.g. <i>"Reports of two people trapped at the collapsed police station, check it and watch for smoke."</i></li>
+    </ol>
+    <form class="ai-input" id="ai-form" autocomplete="off">
+      <button type="button" class="ai-mic" id="ai-mic" title="Hold to speak"><svg class="i"><use href="#i-mic"/></svg></button>
+      <input id="ai-text" placeholder="Message the commander…" maxlength="600">
+      <button type="submit" class="ai-send" id="ai-send" title="Send"><svg class="i"><use href="#i-send"/></svg></button>
+    </form>
+    <span class="ai-spend" id="ai-spend" title="Real Meta API calls today and estimated Muse Spark spend"></span>
+  </aside>
+  <script src="map.js"></script>
+  <script src="app.js"></script>
+  <script src="ai.js"></script>
+</body>
+</html>
