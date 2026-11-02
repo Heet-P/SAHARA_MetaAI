@@ -35,6 +35,7 @@ __pycache__/
 /ppt/
 /ppt.zip
 *.mp4
+!/demo/out/sahara-meta.mp4
 *.wav
 /demo/out/meta/
 /promo/out/*.mp4
