@@ -1,0 +1,493 @@
+{
+ "cut": "live",
+ "duration": 51.599999999999994,
+ "events": [
+  {
+   "t": 0,
+   "type": "whoosh",
+   "v": 1
+  },
+  {
+   "t": 0,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 0.05,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 2.5,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 6,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 10,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 10.05,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 12,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 15,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 25,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 25.05,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 27.5,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 29,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 29.05,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 31.5,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 36,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 41.2,
+   "type": "impact",
+   "v": 1
+  },
+  {
+   "t": 41.3,
+   "type": "thud",
+   "v": 1
+  },
+  {
+   "t": 41.35,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 44.7,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 46.6,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 46.6,
+   "type": "swish",
+   "v": 0.8
+  },
+  {
+   "t": 48.365,
+   "type": "thud",
+   "v": 0.9
+  }
+ ],
+ "segs": [
+  {
+   "src": "ay",
+   "a": 12.5,
+   "b": 18.5,
+   "dur": 6,
+   "n": "01",
+   "title": "First test flights",
+   "sub": "Our S500 quadcopter, flown by our pilot on the RC controller",
+   "beats": [
+    [
+     12.5,
+     "#0E1422",
+     "Test",
+     "No-payload test flight"
+    ],
+    [
+     15,
+     "#16A34A",
+     "Take-off",
+     "Lifts off from the grass"
+    ]
+   ],
+   "t0": 0,
+   "t1": 6,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#0E1422",
+     "k": "Test",
+     "v": "No-payload test flight"
+    },
+    {
+     "lt": 2.5,
+     "col": "#16A34A",
+     "k": "Take-off",
+     "v": "Lifts off from the grass"
+    }
+   ]
+  },
+  {
+   "src": "ay",
+   "a": 19,
+   "b": 23,
+   "dur": 4,
+   "n": "01",
+   "title": "First test flights",
+   "sub": "Our S500 quadcopter, flown by our pilot on the RC controller",
+   "cont": true,
+   "beats": [
+    [
+     19,
+     "#16A34A",
+     "In the air",
+     "Stable flight, passing overhead"
+    ]
+   ],
+   "t0": 6,
+   "t1": 10,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#16A34A",
+     "k": "In the air",
+     "v": "Stable flight, passing overhead"
+    }
+   ]
+  },
+  {
+   "src": "ay",
+   "a": 33,
+   "b": 38,
+   "dur": 5,
+   "n": "02",
+   "title": "Payload test: steel bottle",
+   "sub": "Carrying weight under the drone",
+   "beats": [
+    [
+     33,
+     "#0E1422",
+     "Setup",
+     "A steel bottle hangs below the drone"
+    ],
+    [
+     35,
+     "#16A34A",
+     "Take-off",
+     "Lifts off with the payload"
+    ]
+   ],
+   "t0": 10,
+   "t1": 15,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#0E1422",
+     "k": "Setup",
+     "v": "A steel bottle hangs below the drone"
+    },
+    {
+     "lt": 2,
+     "col": "#16A34A",
+     "k": "Take-off",
+     "v": "Lifts off with the payload"
+    }
+   ]
+  },
+  {
+   "src": "ay",
+   "a": 38,
+   "b": 54,
+   "dur": 10,
+   "n": "02",
+   "title": "Payload test: steel bottle",
+   "sub": "Carrying weight under the drone",
+   "cont": true,
+   "beats": [
+    [
+     38,
+     "#16A34A",
+     "In flight",
+     "Flying with the payload attached"
+    ]
+   ],
+   "t0": 15,
+   "t1": 25,
+   "speed": 1.6,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#16A34A",
+     "k": "In flight",
+     "v": "Flying with the payload attached"
+    }
+   ]
+  },
+  {
+   "src": "ay",
+   "a": 55.5,
+   "b": 59.5,
+   "dur": 4,
+   "n": "03",
+   "title": "Safe landing",
+   "sub": "Back on the ground with the team",
+   "beats": [
+    [
+     55.5,
+     "#16A34A",
+     "Landing",
+     "Coming in to land"
+    ],
+    [
+     58,
+     "#16A34A",
+     "Landed",
+     "Back on the ground, safely"
+    ]
+   ],
+   "t0": 25,
+   "t1": 29,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#16A34A",
+     "k": "Landing",
+     "v": "Coming in to land"
+    },
+    {
+     "lt": 2.5,
+     "col": "#16A34A",
+     "k": "Landed",
+     "v": "Back on the ground, safely"
+    }
+   ]
+  },
+  {
+   "src": "wa",
+   "a": 14,
+   "b": 21,
+   "dur": 7,
+   "n": "04",
+   "title": "Payload drop test",
+   "sub": "A cardboard box, released in flight from the pilot's RC controller",
+   "beats": [
+    [
+     14,
+     "#0E1422",
+     "Setup",
+     "A cardboard box is tied under the drone"
+    ],
+    [
+     16.5,
+     "#16A34A",
+     "Take-off",
+     "Lifts off with the box"
+    ]
+   ],
+   "t0": 29,
+   "t1": 36,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#0E1422",
+     "k": "Setup",
+     "v": "A cardboard box is tied under the drone"
+    },
+    {
+     "lt": 2.5,
+     "col": "#16A34A",
+     "k": "Take-off",
+     "v": "Lifts off with the box"
+    }
+   ]
+  },
+  {
+   "src": "wa",
+   "a": 21,
+   "b": 28.8,
+   "dur": 3.9,
+   "n": "04",
+   "title": "Payload drop test",
+   "sub": "A cardboard box, released in flight from the pilot's RC controller",
+   "cont": true,
+   "beats": [
+    [
+     21,
+     "#16A34A",
+     "Climbing",
+     "Climbing with the payload"
+    ]
+   ],
+   "t0": 36,
+   "t1": 39.9,
+   "speed": 2.0000000000000004,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#16A34A",
+     "k": "Climbing",
+     "v": "Climbing with the payload"
+    }
+   ]
+  },
+  {
+   "src": "wa",
+   "a": 28.8,
+   "b": 30.1,
+   "dur": 1.3,
+   "n": "04",
+   "title": "Payload drop test",
+   "sub": "A cardboard box, released in flight from the pilot's RC controller",
+   "cont": true,
+   "beats": [
+    [
+     28.8,
+     "#16A34A",
+     "Climbing",
+     "Climbing with the payload"
+    ]
+   ],
+   "t0": 39.9,
+   "t1": 41.199999999999996,
+   "speed": 1.0000000000000004,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#16A34A",
+     "k": "Climbing",
+     "v": "Climbing with the payload"
+    }
+   ]
+  },
+  {
+   "id": "freeze",
+   "src": "wa",
+   "still": 30.1,
+   "dur": 3.5,
+   "n": "04",
+   "title": "Payload drop test",
+   "sub": "A cardboard box, released in flight from the pilot's RC controller",
+   "cont": true,
+   "beats": [
+    [
+     0,
+     "#DC2626",
+     "Payload released",
+     "Dropped on command from the pilot's RC controller"
+    ]
+   ],
+   "t0": 41.199999999999996,
+   "t1": 44.699999999999996,
+   "speed": 0,
+   "cues": [
+    {
+     "lt": 0.15,
+     "col": "#DC2626",
+     "k": "Payload released",
+     "v": "Dropped on command from the pilot's RC controller"
+    }
+   ]
+  },
+  {
+   "src": "wa",
+   "a": 30.1,
+   "b": 32,
+   "dur": 1.9,
+   "n": "04",
+   "title": "Payload drop test",
+   "sub": "A cardboard box, released in flight from the pilot's RC controller",
+   "cont": true,
+   "beats": [
+    [
+     30.1,
+     "#DC2626",
+     "Payload released",
+     "The box falls away \u2014 the drone flies on"
+    ]
+   ],
+   "t0": 44.699999999999996,
+   "t1": 46.599999999999994,
+   "speed": 0.9999999999999993,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#DC2626",
+     "k": "Payload released",
+     "v": "The box falls away \u2014 the drone flies on"
+    }
+   ]
+  },
+  {
+   "id": "replay",
+   "src": "wa",
+   "a": 29.5,
+   "b": 31.2,
+   "dur": 5,
+   "zoom": [
+    219,
+    36,
+    512,
+    288
+   ],
+   "n": "04",
+   "title": "Payload drop test",
+   "sub": "A cardboard box, released in flight from the pilot's RC controller",
+   "cont": true,
+   "beats": [
+    [
+     29.5,
+     "#F97316",
+     "Replay \u00b7 2\u00d7 zoom",
+     "The moment of release"
+    ]
+   ],
+   "t0": 46.599999999999994,
+   "t1": 51.599999999999994,
+   "speed": 0.33999999999999986,
+   "cues": [
+    {
+     "lt": 0,
+     "col": "#F97316",
+     "k": "Replay \u00b7 2\u00d7 zoom",
+     "v": "The moment of release"
+    }
+   ]
+  }
+ ]
+}

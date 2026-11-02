@@ -1,0 +1,40 @@
+{
+ "cut": "end",
+ "duration": 6,
+ "events": [
+  {
+   "t": 0.02,
+   "type": "impact",
+   "v": 1.1
+  },
+  {
+   "t": 0.95,
+   "type": "pop",
+   "v": 0.8
+  },
+  {
+   "t": 1.3,
+   "type": "tick",
+   "v": 0.6
+  },
+  {
+   "t": 1.42,
+   "type": "tick",
+   "v": 0.6
+  },
+  {
+   "t": 1.54,
+   "type": "tick",
+   "v": 0.6
+  }
+ ],
+ "segs": [
+  {
+   "id": "outro",
+   "layout": "card",
+   "dur": 6,
+   "t0": 0,
+   "t1": 6
+  }
+ ]
+}

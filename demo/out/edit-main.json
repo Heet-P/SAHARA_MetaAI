@@ -1,0 +1,992 @@
+{
+ "cut": "main",
+ "duration": 145.25,
+ "events": [
+  {
+   "t": 0.1,
+   "type": "pop",
+   "v": 0.6
+  },
+  {
+   "t": 0.9,
+   "type": "pop",
+   "v": 0.7
+  },
+  {
+   "t": 3.4,
+   "type": "riser",
+   "v": 1.3
+  },
+  {
+   "t": 5,
+   "type": "whoosh",
+   "v": 1
+  },
+  {
+   "t": 5.1,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 5.5,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 7.727,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 11.136,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 12.6,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 13,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 15,
+   "type": "pop",
+   "v": 0.9
+  },
+  {
+   "t": 16.25,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 17.75,
+   "type": "confirm",
+   "v": 0.9
+  },
+  {
+   "t": 19.5,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 23.75,
+   "type": "thud",
+   "v": 0.9
+  },
+  {
+   "t": 26.25,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 28.85,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 29.25,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 32.75,
+   "type": "pop",
+   "v": 0.9
+  },
+  {
+   "t": 36.75,
+   "type": "confirm",
+   "v": 0.9
+  },
+  {
+   "t": 39.25,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 42.75,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 43.85,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 44.25,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 48.55,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 53.45,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 53.85,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 58.15,
+   "type": "pop",
+   "v": 0.9
+  },
+  {
+   "t": 61.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 64.35,
+   "type": "whoosh",
+   "v": 1
+  },
+  {
+   "t": 64.6,
+   "type": "impact",
+   "v": 0.9
+  },
+  {
+   "t": 68.85,
+   "type": "whoosh",
+   "v": 1
+  },
+  {
+   "t": 68.95,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 69.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 72.85,
+   "type": "pop",
+   "v": 0.9
+  },
+  {
+   "t": 76.85,
+   "type": "confirm",
+   "v": 0.9
+  },
+  {
+   "t": 81.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 82.95,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 83.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 85.35,
+   "type": "pop",
+   "v": 0.9
+  },
+  {
+   "t": 91.85,
+   "type": "slam",
+   "v": 0.9
+  },
+  {
+   "t": 94.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 96.95,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 97.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 100.35,
+   "type": "pop",
+   "v": 0.9
+  },
+  {
+   "t": 104.35,
+   "type": "pop",
+   "v": 0.9
+  },
+  {
+   "t": 108.35,
+   "type": "pop",
+   "v": 0.9
+  },
+  {
+   "t": 111.95,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 112.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 113.85,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 123.85,
+   "type": "confirm",
+   "v": 0.9
+  },
+  {
+   "t": 124.95,
+   "type": "tick",
+   "v": 0.7
+  },
+  {
+   "t": 125.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 130.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 135.35,
+   "type": "tick",
+   "v": 0.5
+  },
+  {
+   "t": 140.25,
+   "type": "whoosh",
+   "v": 1
+  },
+  {
+   "t": 140.5,
+   "type": "impact",
+   "v": 1.1
+  }
+ ],
+ "segs": [
+  {
+   "id": "intro",
+   "layout": "card",
+   "dur": 5,
+   "t0": 0,
+   "t1": 5
+  },
+  {
+   "layout": "FEED",
+   "src": "day",
+   "a": 20,
+   "b": 31,
+   "dur": 7.5,
+   "n": "01",
+   "title": "Autonomous take-off",
+   "sub": "One button starts the mission \u2014 the drone does the rest",
+   "beats": [
+    [
+     20,
+     "#0284C7",
+     "Take-off",
+     "Lifts off on its own"
+    ],
+    [
+     24,
+     "#0284C7",
+     "Climbing",
+     "Climbs to its 8 m search height"
+    ],
+    [
+     29,
+     "#F97316",
+     "Searching",
+     "Starts searching the disaster zone"
+    ]
+   ],
+   "t0": 5,
+   "t1": 12.5,
+   "speed": 1.4666666666666666,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0284C7",
+     "k": "Take-off",
+     "v": "Lifts off on its own",
+     "snd": null
+    },
+    {
+     "lt": 2.7272727272727275,
+     "col": "#0284C7",
+     "k": "Climbing",
+     "v": "Climbs to its 8 m search height",
+     "snd": null
+    },
+    {
+     "lt": 6.136363636363637,
+     "col": "#F97316",
+     "k": "Searching",
+     "v": "Starts searching the disaster zone",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "layout": "FEED",
+   "src": "day",
+   "a": 31,
+   "b": 44,
+   "dur": 16.25,
+   "n": "02",
+   "title": "First survivor found",
+   "sub": "Detect \u2192 verify \u2192 confirm \u2192 drop aid, all on its own",
+   "beats": [
+    [
+     31,
+     "#0284C7",
+     "Searching",
+     "Scanning the ground with its camera"
+    ],
+    [
+     33,
+     "#F97316",
+     "AI detection",
+     "The AI spots a person",
+     "pop"
+    ],
+    [
+     34,
+     "#F97316",
+     "Verifying",
+     "Stops and hovers over them to double-check"
+    ],
+    [
+     35.2,
+     "#DC2626",
+     "Confirmed",
+     "Casualty V1 confirmed \u00b7 RGB confidence 0.93",
+     "confirm"
+    ],
+    [
+     36.6,
+     "#16A34A",
+     "Aid drop",
+     "Moves 2.5 m to the side to drop the aid kit"
+    ],
+    [
+     40,
+     "#16A34A",
+     "Aid drop",
+     "Aid kit dropped beside the casualty",
+     "thud"
+    ],
+    [
+     42,
+     "#0284C7",
+     "Searching",
+     "Resumes the search for more survivors"
+    ]
+   ],
+   "t0": 12.5,
+   "t1": 28.75,
+   "speed": 0.8,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0284C7",
+     "k": "Searching",
+     "v": "Scanning the ground with its camera",
+     "snd": null
+    },
+    {
+     "lt": 2.5,
+     "col": "#F97316",
+     "k": "AI detection",
+     "v": "The AI spots a person",
+     "snd": "pop"
+    },
+    {
+     "lt": 3.75,
+     "col": "#F97316",
+     "k": "Verifying",
+     "v": "Stops and hovers over them to double-check",
+     "snd": null
+    },
+    {
+     "lt": 5.2500000000000036,
+     "col": "#DC2626",
+     "k": "Confirmed",
+     "v": "Casualty V1 confirmed \u00b7 RGB confidence 0.93",
+     "snd": "confirm"
+    },
+    {
+     "lt": 7.000000000000002,
+     "col": "#16A34A",
+     "k": "Aid drop",
+     "v": "Moves 2.5 m to the side to drop the aid kit",
+     "snd": null
+    },
+    {
+     "lt": 11.25,
+     "col": "#16A34A",
+     "k": "Aid drop",
+     "v": "Aid kit dropped beside the casualty",
+     "snd": "thud"
+    },
+    {
+     "lt": 13.75,
+     "col": "#0284C7",
+     "k": "Searching",
+     "v": "Resumes the search for more survivors",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "layout": "FEED",
+   "src": "day",
+   "a": 56,
+   "b": 71,
+   "dur": 15,
+   "n": "03",
+   "title": "Second survivor",
+   "sub": "Found and geo-tagged in the next area",
+   "beats": [
+    [
+     56,
+     "#0284C7",
+     "Searching",
+     "Searching the next most likely area"
+    ],
+    [
+     60,
+     "#F97316",
+     "AI detection",
+     "Another person spotted \u2014 hovering to verify",
+     "pop"
+    ],
+    [
+     64,
+     "#DC2626",
+     "Confirmed",
+     "Casualty V2 confirmed \u00b7 RGB confidence 0.94",
+     "confirm"
+    ],
+    [
+     66.5,
+     "#0E1422",
+     "Marked",
+     "Position saved on the map (only one aid kit on board)"
+    ],
+    [
+     70,
+     "#0284C7",
+     "Searching",
+     "Back to searching"
+    ]
+   ],
+   "t0": 28.75,
+   "t1": 43.75,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0284C7",
+     "k": "Searching",
+     "v": "Searching the next most likely area",
+     "snd": null
+    },
+    {
+     "lt": 4,
+     "col": "#F97316",
+     "k": "AI detection",
+     "v": "Another person spotted \u2014 hovering to verify",
+     "snd": "pop"
+    },
+    {
+     "lt": 8,
+     "col": "#DC2626",
+     "k": "Confirmed",
+     "v": "Casualty V2 confirmed \u00b7 RGB confidence 0.94",
+     "snd": "confirm"
+    },
+    {
+     "lt": 10.5,
+     "col": "#0E1422",
+     "k": "Marked",
+     "v": "Position saved on the map (only one aid kit on board)",
+     "snd": null
+    },
+    {
+     "lt": 14,
+     "col": "#0284C7",
+     "k": "Searching",
+     "v": "Back to searching",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "layout": "FEED",
+   "src": "day",
+   "a": 72,
+   "b": 96,
+   "dur": 9.6,
+   "n": "04",
+   "title": "Smart search",
+   "sub": "It flies where survivors are most likely \u2014 not in rows",
+   "beats": [
+    [
+     72,
+     "#0284C7",
+     "Planner",
+     "Heads for the most likely unsearched area"
+    ],
+    [
+     84,
+     "#0284C7",
+     "Planner",
+     "Every camera look updates a live probability map"
+    ]
+   ],
+   "t0": 43.75,
+   "t1": 53.35,
+   "speed": 2.5,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0284C7",
+     "k": "Planner",
+     "v": "Heads for the most likely unsearched area",
+     "snd": null
+    },
+    {
+     "lt": 4.8,
+     "col": "#0284C7",
+     "k": "Planner",
+     "v": "Every camera look updates a live probability map",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "layout": "FEED",
+   "src": "day",
+   "a": 157,
+   "b": 168,
+   "dur": 11,
+   "n": "05",
+   "title": "Hazard: flood water",
+   "sub": "Dangers are mapped too, so rescue teams avoid them",
+   "beats": [
+    [
+     157,
+     "#0284C7",
+     "Searching",
+     "Scanning the ground"
+    ],
+    [
+     161.8,
+     "#2563EB",
+     "Hazard",
+     "Flood water detected \u00b7 thermal + RGB",
+     "pop"
+    ],
+    [
+     165,
+     "#2563EB",
+     "Hazard map",
+     "Added to the map as a zone to avoid"
+    ]
+   ],
+   "t0": 53.35,
+   "t1": 64.35,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0284C7",
+     "k": "Searching",
+     "v": "Scanning the ground",
+     "snd": null
+    },
+    {
+     "lt": 4.800000000000011,
+     "col": "#2563EB",
+     "k": "Hazard",
+     "v": "Flood water detected \u00b7 thermal + RGB",
+     "snd": "pop"
+    },
+    {
+     "lt": 8,
+     "col": "#2563EB",
+     "k": "Hazard map",
+     "v": "Added to the map as a zone to avoid",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "id": "night",
+   "layout": "card",
+   "dur": 4.5,
+   "t0": 64.35,
+   "t1": 68.85
+  },
+  {
+   "layout": "FEED",
+   "src": "night",
+   "a": 61,
+   "b": 75,
+   "dur": 14,
+   "n": "06",
+   "title": "Finding people in the dark",
+   "sub": "At night SAHARA switches to its thermal AI model",
+   "beats": [
+    [
+     61,
+     "#0284C7",
+     "Searching",
+     "Searching using the thermal camera"
+    ],
+    [
+     65,
+     "#F97316",
+     "AI detection",
+     "Thermal AI spots a person \u2014 hovering to verify",
+     "pop"
+    ],
+    [
+     69,
+     "#DC2626",
+     "Confirmed",
+     "Casualty V2 confirmed \u00b7 thermal confidence 0.62",
+     "confirm"
+    ],
+    [
+     73.5,
+     "#0284C7",
+     "Searching",
+     "Back to searching"
+    ]
+   ],
+   "t0": 68.85,
+   "t1": 82.85,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0284C7",
+     "k": "Searching",
+     "v": "Searching using the thermal camera",
+     "snd": null
+    },
+    {
+     "lt": 4,
+     "col": "#F97316",
+     "k": "AI detection",
+     "v": "Thermal AI spots a person \u2014 hovering to verify",
+     "snd": "pop"
+    },
+    {
+     "lt": 8,
+     "col": "#DC2626",
+     "k": "Confirmed",
+     "v": "Casualty V2 confirmed \u00b7 thermal confidence 0.62",
+     "snd": "confirm"
+    },
+    {
+     "lt": 12.5,
+     "col": "#0284C7",
+     "k": "Searching",
+     "v": "Back to searching",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "layout": "FEED",
+   "src": "night",
+   "a": 120,
+   "b": 134,
+   "dur": 14,
+   "n": "07",
+   "title": "Fire hot spot \u00b7 77 \u00b0C",
+   "sub": "Heat shows up clearly in thermal",
+   "beats": [
+    [
+     120,
+     "#0284C7",
+     "Searching",
+     "Scanning in thermal"
+    ],
+    [
+     122.5,
+     "#EA580C",
+     "Hot spot",
+     "Something very hot comes into view",
+     "pop"
+    ],
+    [
+     129,
+     "#EA580C",
+     "Hazard",
+     "Fire / hot spot detected \u00b7 77 \u00b0C",
+     "slam"
+    ],
+    [
+     131.5,
+     "#EA580C",
+     "Hazard map",
+     "Mapped with a safety buffer around it"
+    ]
+   ],
+   "t0": 82.85,
+   "t1": 96.85,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0284C7",
+     "k": "Searching",
+     "v": "Scanning in thermal",
+     "snd": null
+    },
+    {
+     "lt": 2.5,
+     "col": "#EA580C",
+     "k": "Hot spot",
+     "v": "Something very hot comes into view",
+     "snd": "pop"
+    },
+    {
+     "lt": 9,
+     "col": "#EA580C",
+     "k": "Hazard",
+     "v": "Fire / hot spot detected \u00b7 77 \u00b0C",
+     "snd": "slam"
+    },
+    {
+     "lt": 11.5,
+     "col": "#EA580C",
+     "k": "Hazard map",
+     "v": "Mapped with a safety buffer around it",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "layout": "PRIO",
+   "src": "night",
+   "a": 164,
+   "b": 179,
+   "dur": 15,
+   "n": "08",
+   "title": "Rescue priorities",
+   "sub": "Who to reach first \u2014 and a safe way to get there",
+   "beats": [
+    [
+     164,
+     "#0E1422",
+     "Mission map",
+     "2 casualties and 2 hazards on one live map"
+    ],
+    [
+     167.5,
+     "#DC2626",
+     "Priority 1 \u00b7 V2",
+     "Fire 8 m away \u2192 safe route 39 m, about 0.7 min on foot",
+     "pop"
+    ],
+    [
+     171.5,
+     "#D97706",
+     "Priority 2 \u00b7 V1",
+     "Aid kit dropped \u2192 safe route 25 m, about 0.4 min on foot",
+     "pop"
+    ],
+    [
+     175.5,
+     "#16A34A",
+     "Search coverage",
+     "90% probability of success reached",
+     "pop"
+    ]
+   ],
+   "t0": 96.85,
+   "t1": 111.85,
+   "speed": 1,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0E1422",
+     "k": "Mission map",
+     "v": "2 casualties and 2 hazards on one live map",
+     "snd": null
+    },
+    {
+     "lt": 3.5,
+     "col": "#DC2626",
+     "k": "Priority 1 \u00b7 V2",
+     "v": "Fire 8 m away \u2192 safe route 39 m, about 0.7 min on foot",
+     "snd": "pop"
+    },
+    {
+     "lt": 7.5,
+     "col": "#D97706",
+     "k": "Priority 2 \u00b7 V1",
+     "v": "Aid kit dropped \u2192 safe route 25 m, about 0.4 min on foot",
+     "snd": "pop"
+    },
+    {
+     "lt": 11.5,
+     "col": "#16A34A",
+     "k": "Search coverage",
+     "v": "90% probability of success reached",
+     "snd": "pop"
+    }
+   ]
+  },
+  {
+   "layout": "FEED",
+   "src": "day",
+   "a": 176,
+   "b": 202,
+   "dur": 13,
+   "n": "09",
+   "title": "Returns and lands",
+   "sub": "Search target reached \u2014 it flies home on its own",
+   "beats": [
+    [
+     176,
+     "#0284C7",
+     "Returning",
+     "Flying back to the launch point"
+    ],
+    [
+     180,
+     "#0284C7",
+     "Landing",
+     "Descending to land"
+    ],
+    [
+     200,
+     "#16A34A",
+     "Complete",
+     "Landed \u00b7 mission complete",
+     "confirm"
+    ]
+   ],
+   "t0": 111.85,
+   "t1": 124.85,
+   "speed": 2,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0284C7",
+     "k": "Returning",
+     "v": "Flying back to the launch point",
+     "snd": null
+    },
+    {
+     "lt": 2,
+     "col": "#0284C7",
+     "k": "Landing",
+     "v": "Descending to land",
+     "snd": null
+    },
+    {
+     "lt": 12,
+     "col": "#16A34A",
+     "k": "Complete",
+     "v": "Landed \u00b7 mission complete",
+     "snd": "confirm"
+    }
+   ]
+  },
+  {
+   "layout": "SITREP",
+   "src": "day",
+   "a": 202,
+   "b": 217.4,
+   "dur": 15.4,
+   "n": "10",
+   "title": "One-click SITREP",
+   "sub": "A situation report built from the drone's own data",
+   "beats": [
+    [
+     202,
+     "#0E1422",
+     "Report",
+     "Summary, map and search coverage"
+    ],
+    [
+     207.5,
+     "#DC2626",
+     "Report",
+     "Every casualty with GPS position, priority and action"
+    ],
+    [
+     212.5,
+     "#16A34A",
+     "Offline",
+     "Print or save as PDF \u2014 no internet needed"
+    ]
+   ],
+   "t0": 124.85,
+   "t1": 140.25,
+   "speed": 1.0000000000000004,
+   "cues": [
+    {
+     "lt": 0.5,
+     "col": "#0E1422",
+     "k": "Report",
+     "v": "Summary, map and search coverage",
+     "snd": null
+    },
+    {
+     "lt": 5.499999999999997,
+     "col": "#DC2626",
+     "k": "Report",
+     "v": "Every casualty with GPS position, priority and action",
+     "snd": null
+    },
+    {
+     "lt": 10.499999999999995,
+     "col": "#16A34A",
+     "k": "Offline",
+     "v": "Print or save as PDF \u2014 no internet needed",
+     "snd": null
+    }
+   ]
+  },
+  {
+   "id": "live",
+   "layout": "card",
+   "dur": 5,
+   "t0": 140.25,
+   "t1": 145.25
+  }
+ ]
+}
